@@ -12,7 +12,7 @@ seniors,female,c,computer science,orange,simple,down
 adults,female,c,police,green,simple,up
 children,male,a,police,purple,complex,down
 children,male,c,police,black,complex,down
-children,female,a,education,white,complex,left
+children,female,a,education,grey,complex,left
 adults,female,b,restaurants,black,simple,up
 youth,female,b,enviroment,purple,elegant,left
 seniors,female,a,police,green,simple,right
@@ -26,13 +26,13 @@ seniors,female,c,cinema,black,cartoonish,right
 seniors,male,c,engineer,brown,cartoonish,down
 youth,male,c,engineer,purple,elegant,down
 children,male,c,weather,blue,elegant,up
-seniors,male,c,mechanic,white,elegant,down
+seniors,male,c,mechanic,grey,elegant,down
 youth,male,a,engineer,green,simple,right
 youth,male,b,weather,black,cartoonish,right
 children,female,c,engineer,black,complex,right
 youth,female,c,computer science,pink,cartoonish,left
 seniors,male,c,enviroment,orange,cartoonish,up
-seniors,female,c,sales,white,elegant,up
+seniors,female,c,sales,grey,elegant,up
 adults,female,c,engineer,red,cartoonish,right
 children,female,a,education,purple,simple,right
 children,male,c,restaurants,blue,complex,up
@@ -44,7 +44,7 @@ adults,female,b,cinema,brown,complex,down
 youth,female,c,police,brown,complex,down
 seniors,male,a,cinema,blue,simple,up
 youth,female,b,education,black,cartoonish,up
-children,female,c,police,white,cartoonish,up
+children,female,c,police,grey,cartoonish,up
 children,female,b,computer science,blue,complex,right
 youth,female,b,cinema,orange,cartoonish,left
 seniors,female,b,mass communication,blue,cartoonish,up
@@ -65,14 +65,14 @@ seniors,female,b,police,brown,elegant,left
 youth,male,b,mechanic,green,complex,up
 adults,male,c,mass communication,yellow,cartoonish,up
 adults,male,b,education,yellow,elegant,left
-seniors,female,b,mass communication,white,elegant,up
-seniors,male,b,restaurants,white,simple,right
+seniors,female,b,mass communication,grey,elegant,up
+seniors,male,b,restaurants,grey,simple,right
 youth,male,a,cinema,orange,complex,left
 seniors,male,a,restaurants,brown,simple,left
 youth,male,c,weather,black,cartoonish,down
 children,male,b,mass communication,blue,cartoonish,up
 seniors,female,b,sales,red,simple,right
-children,male,c,education,white,cartoonish,left
+children,male,c,education,grey,cartoonish,left
 youth,female,b,medical,pink,cartoonish,right
 children,female,c,education,yellow,elegant,up
 youth,female,a,sales,brown,elegant,left
@@ -90,8 +90,8 @@ seniors,male,c,engineer,brown,cartoonish,right
 children,female,a,computer science,brown,cartoonish,left
 children,female,a,sales,black,cartoonish,up
 seniors,male,a,police,blue,complex,down
-youth,female,a,computer science,white,cartoonish,right
-children,female,c,enviroment,white,complex,left
+youth,female,a,computer science,grey,cartoonish,right
+children,female,c,enviroment,grey,complex,left
 youth,female,b,computer science,pink,cartoonish,up
 youth,female,c,sales,black,complex,left
 seniors,female,c,enviroment,blue,cartoonish,down
@@ -113,17 +113,17 @@ children,female,b,medical,yellow,simple,right
 youth,male,b,engineer,black,simple,left
 youth,female,b,police,purple,complex,right
 seniors,female,b,engineer,blue,cartoonish,left
-adults,female,a,computer science,white,complex,right
+adults,female,a,computer science,grey,complex,right
 seniors,male,c,police,pink,elegant,right
 seniors,female,b,mass communication,orange,elegant,left
 youth,male,b,enviroment,green,complex,right
-youth,female,c,restaurants,white,cartoonish,left
+youth,female,c,restaurants,grey,cartoonish,left
 seniors,female,a,computer science,blue,elegant,right
 seniors,male,b,police,black,simple,left
 adults,male,c,sales,brown,simple,right
 adults,female,b,medical,brown,simple,up
-seniors,female,c,sales,white,complex,up
-children,female,b,restaurants,white,elegant,right
+seniors,female,c,sales,grey,complex,up
+children,female,b,restaurants,grey,elegant,right
 seniors,male,a,restaurants,pink,cartoonish,right
 youth,female,a,engineer,black,cartoonish,right
 seniors,female,c,enviroment,blue,simple,up
@@ -154,7 +154,7 @@ children,female,a,cinema,orange,cartoonish,up
 adults,female,c,cinema,yellow,simple,down
 adults,male,a,engineer,yellow,cartoonish,up
 children,male,a,weather,purple,cartoonish,left
-seniors,male,c,education,white,cartoonish,right
+seniors,male,c,education,grey,cartoonish,right
 seniors,male,c,education,blue,complex,down
 youth,female,a,mechanic,purple,cartoonish,up
 seniors,female,a,computer science,orange,elegant,down
@@ -189,7 +189,7 @@ children,male,a,mechanic,brown,simple,left
 children,male,a,mass communication,yellow,complex,left
 adults,female,a,police,brown,elegant,left
 seniors,male,c,computer science,brown,simple,up
-seniors,female,b,enviroment,white,cartoonish,left
+seniors,female,b,enviroment,grey,cartoonish,left
 children,female,b,mechanic,blue,simple,down
 adults,female,b,engineer,orange,cartoonish,up
 children,female,a,weather,black,elegant,left
@@ -204,7 +204,7 @@ seniors,female,a,medical,red,cartoonish,up
 seniors,male,a,sales,pink,cartoonish,up
 seniors,female,b,police,brown,complex,down
 seniors,male,a,police,orange,elegant,left
-seniors,male,a,cinema,white,complex,left
+seniors,male,a,cinema,grey,complex,left
 adults,female,b,weather,black,complex,down
 seniors,male,c,weather,purple,complex,left
 youth,female,c,medical,red,simple,left
@@ -222,13 +222,13 @@ youth,male,b,mass communication,purple,elegant,up
 adults,female,b,cinema,green,complex,up
 adults,female,c,mass communication,green,complex,down
 adults,female,a,sales,green,simple,down
-youth,female,a,enviroment,white,elegant,left
+youth,female,a,enviroment,grey,elegant,left
 seniors,male,a,police,black,cartoonish,up
 children,female,a,restaurants,orange,elegant,down
 children,male,c,cinema,pink,simple,down
-seniors,male,b,medical,white,cartoonish,up
+seniors,male,b,medical,grey,cartoonish,up
 youth,male,a,computer science,yellow,cartoonish,up
-children,male,b,computer science,white,simple,up
+children,male,b,computer science,grey,simple,up
 youth,female,c,weather,pink,cartoonish,left
 adults,male,a,medical,green,cartoonish,left
 adults,male,c,engineer,black,simple,down
@@ -250,7 +250,7 @@ adults,female,b,cinema,pink,elegant,right
 youth,male,a,police,brown,cartoonish,up
 youth,female,b,enviroment,purple,cartoonish,up
 adults,female,a,restaurants,red,complex,right
-adults,male,a,medical,white,simple,left
+adults,male,a,medical,grey,simple,left
 youth,female,c,sales,green,cartoonish,down
 youth,female,b,mechanic,purple,elegant,down
 children,male,c,mechanic,red,elegant,down
@@ -262,7 +262,7 @@ adults,male,b,education,red,cartoonish,left
 youth,male,c,computer science,red,cartoonish,left
 adults,female,b,mass communication,pink,complex,right
 adults,female,b,medical,pink,complex,right
-adults,male,a,education,white,elegant,down
+adults,male,a,education,grey,elegant,down
 seniors,female,a,mechanic,yellow,elegant,right
 adults,male,b,education,pink,complex,right
 children,female,b,mechanic,pink,cartoonish,down
@@ -273,16 +273,16 @@ seniors,female,a,cinema,black,cartoonish,up
 children,male,a,engineer,red,cartoonish,right
 seniors,male,a,sales,pink,elegant,left
 children,female,b,enviroment,red,simple,down
-seniors,female,c,enviroment,white,simple,left
+seniors,female,c,enviroment,grey,simple,left
 seniors,male,a,engineer,brown,elegant,down
 youth,male,a,cinema,purple,complex,up
 children,female,b,police,green,complex,up
 children,male,b,medical,green,simple,right
-adults,female,b,restaurants,white,elegant,up
+adults,female,b,restaurants,grey,elegant,up
 seniors,male,b,engineer,pink,complex,left
 children,male,a,mechanic,yellow,cartoonish,up
-children,male,a,medical,white,complex,left
-adults,male,c,computer science,white,simple,down
+children,male,a,medical,grey,complex,left
+adults,male,c,computer science,grey,simple,down
 children,male,a,mechanic,brown,cartoonish,left
 adults,female,a,enviroment,purple,complex,up
 youth,female,c,engineer,pink,cartoonish,left
@@ -292,7 +292,7 @@ seniors,male,b,mechanic,purple,cartoonish,up
 adults,male,a,weather,black,cartoonish,left
 adults,male,a,mass communication,pink,simple,right
 seniors,male,b,sales,green,cartoonish,down
-seniors,female,c,computer science,white,elegant,up
+seniors,female,c,computer science,grey,elegant,up
 adults,female,c,cinema,black,complex,down
 seniors,male,b,cinema,red,cartoonish,right
 adults,male,b,enviroment,orange,cartoonish,up
@@ -317,10 +317,10 @@ youth,female,c,engineer,purple,complex,right
 youth,female,b,cinema,black,cartoonish,up
 youth,male,b,engineer,brown,cartoonish,down
 adults,male,c,computer science,red,cartoonish,up
-children,male,c,restaurants,white,simple,up
+children,male,c,restaurants,grey,simple,up
 seniors,male,b,police,green,complex,left
 children,female,c,cinema,red,cartoonish,right
-seniors,female,a,engineer,white,cartoonish,up
+seniors,female,a,engineer,grey,cartoonish,up
 adults,male,c,sales,blue,elegant,up
 adults,female,b,engineer,red,simple,up
 adults,male,b,mass communication,black,complex,right
@@ -369,10 +369,10 @@ adults,female,c,mechanic,blue,complex,right
 children,male,b,mechanic,brown,elegant,left
 children,male,a,weather,purple,complex,down
 youth,male,c,education,blue,elegant,down
-seniors,male,c,weather,white,complex,left
+seniors,male,c,weather,grey,complex,left
 seniors,female,a,police,red,elegant,up
 seniors,female,c,education,green,cartoonish,down
-youth,female,b,computer science,white,complex,down
+youth,female,b,computer science,grey,complex,down
 seniors,male,b,medical,orange,complex,up
 adults,male,b,mass communication,pink,cartoonish,up
 seniors,male,a,mass communication,red,elegant,down
@@ -386,10 +386,10 @@ adults,female,a,mass communication,red,complex,down
 youth,female,c,medical,green,cartoonish,down
 seniors,male,c,mass communication,brown,complex,up
 children,female,a,mechanic,green,complex,right
-seniors,male,b,restaurants,white,elegant,right
+seniors,male,b,restaurants,grey,elegant,right
 seniors,male,c,cinema,red,complex,right
 children,female,a,cinema,yellow,simple,left
-adults,female,b,mass communication,white,cartoonish,up
+adults,female,b,mass communication,grey,cartoonish,up
 youth,female,c,mass communication,black,complex,right
 seniors,female,b,weather,orange,complex,down
 seniors,female,a,mass communication,yellow,cartoonish,down
@@ -400,14 +400,14 @@ youth,male,a,computer science,green,cartoonish,right
 seniors,male,c,enviroment,green,simple,right
 children,male,a,medical,yellow,simple,left
 seniors,male,b,restaurants,pink,simple,down
-children,male,c,mechanic,white,cartoonish,right
+children,male,c,mechanic,grey,cartoonish,right
 children,female,c,mechanic,orange,elegant,left
 adults,female,b,computer science,green,elegant,up
 youth,male,b,computer science,red,elegant,right
 adults,female,c,weather,orange,cartoonish,right
 children,male,c,restaurants,brown,elegant,down
 children,female,a,enviroment,green,elegant,down
-adults,female,b,cinema,white,simple,right
+adults,female,b,cinema,grey,simple,right
 children,male,a,medical,brown,cartoonish,up
 children,male,c,mass communication,red,cartoonish,down
 adults,female,c,enviroment,purple,elegant,down
@@ -422,7 +422,7 @@ seniors,female,b,cinema,orange,elegant,up
 children,male,a,medical,purple,elegant,down
 seniors,male,c,mass communication,brown,simple,left
 adults,female,c,cinema,orange,complex,right
-children,male,a,cinema,white,simple,left
+children,male,a,cinema,grey,simple,left
 adults,male,a,medical,black,simple,left
 youth,female,b,cinema,black,complex,left
 adults,female,b,medical,brown,cartoonish,left
@@ -435,7 +435,7 @@ adults,male,b,cinema,red,simple,left
 children,male,a,computer science,red,elegant,right
 adults,female,c,education,purple,complex,right
 youth,female,c,computer science,brown,elegant,down
-seniors,female,c,computer science,white,cartoonish,up
+seniors,female,c,computer science,grey,cartoonish,up
 adults,female,c,enviroment,blue,simple,down
 seniors,female,b,mass communication,purple,complex,down
 youth,female,b,cinema,red,elegant,up
@@ -462,20 +462,20 @@ adults,male,c,cinema,red,cartoonish,right
 children,male,a,enviroment,red,cartoonish,up
 youth,male,b,sales,yellow,simple,right
 children,male,b,education,yellow,complex,left
-children,female,b,police,white,elegant,left
+children,female,b,police,grey,elegant,left
 adults,female,a,weather,brown,elegant,down
 children,male,c,enviroment,black,simple,down
 seniors,female,b,education,black,elegant,up
-seniors,male,c,mechanic,white,simple,right
+seniors,male,c,mechanic,grey,simple,right
 adults,female,b,cinema,green,simple,left
 adults,male,c,enviroment,red,elegant,up
 adults,female,a,mass communication,brown,elegant,down
 seniors,female,b,sales,red,elegant,left
-adults,male,a,medical,white,elegant,up
+adults,male,a,medical,grey,elegant,up
 children,female,c,mass communication,pink,simple,down
 adults,male,b,weather,pink,complex,up
 youth,female,c,cinema,green,cartoonish,up
-youth,female,a,enviroment,white,complex,up
+youth,female,a,enviroment,grey,complex,up
 seniors,male,c,enviroment,black,cartoonish,left
 youth,female,c,computer science,red,cartoonish,right
 youth,male,c,mass communication,purple,elegant,right
@@ -485,7 +485,7 @@ children,female,c,cinema,red,cartoonish,left
 children,male,c,computer science,blue,elegant,up
 adults,male,c,police,red,elegant,down
 children,female,b,mass communication,purple,elegant,down
-seniors,female,c,enviroment,white,complex,up
+seniors,female,c,enviroment,grey,complex,up
 children,female,a,sales,green,elegant,left
 youth,female,c,computer science,brown,simple,left
 youth,female,b,weather,blue,cartoonish,up
@@ -496,13 +496,13 @@ youth,female,b,enviroment,brown,elegant,down
 youth,female,a,mass communication,black,elegant,right
 youth,female,b,restaurants,yellow,complex,up
 youth,male,c,mass communication,green,complex,down
-youth,female,b,mass communication,white,simple,right
-youth,male,a,weather,white,cartoonish,down
+youth,female,b,mass communication,grey,simple,right
+youth,male,a,weather,grey,cartoonish,down
 adults,male,b,engineer,brown,elegant,up
-seniors,female,a,education,white,cartoonish,left
+seniors,female,a,education,grey,cartoonish,left
 youth,male,c,mass communication,yellow,complex,up
 youth,male,a,cinema,pink,cartoonish,up
-adults,female,b,computer science,white,complex,up
+adults,female,b,computer science,grey,complex,up
 seniors,male,b,police,yellow,cartoonish,down
 seniors,female,c,engineer,green,complex,right
 youth,male,a,police,red,complex,right
@@ -521,13 +521,13 @@ youth,male,c,mechanic,black,complex,right
 children,female,a,mass communication,green,simple,up
 adults,female,b,cinema,brown,simple,up
 children,female,a,mass communication,black,complex,down
-seniors,male,b,mechanic,white,simple,down
-adults,male,c,sales,white,complex,down
+seniors,male,b,mechanic,grey,simple,down
+adults,male,c,sales,grey,complex,down
 youth,female,c,cinema,yellow,complex,down
 adults,female,c,mass communication,brown,elegant,down
 adults,female,c,medical,red,cartoonish,up
-youth,male,b,computer science,white,simple,left
-seniors,female,a,weather,white,cartoonish,left
+youth,male,b,computer science,grey,simple,left
+seniors,female,a,weather,grey,cartoonish,left
 adults,female,b,cinema,green,complex,down
 seniors,female,c,enviroment,purple,cartoonish,right
 children,male,a,enviroment,brown,simple,right
@@ -536,7 +536,7 @@ children,male,a,enviroment,red,elegant,up
 seniors,male,a,engineer,orange,complex,left
 adults,female,a,weather,red,cartoonish,left
 seniors,female,c,restaurants,black,elegant,right
-youth,male,b,enviroment,white,simple,left
+youth,male,b,enviroment,grey,simple,left
 youth,male,c,medical,red,cartoonish,down
 adults,male,c,mass communication,orange,simple,down
 adults,female,a,medical,yellow,complex,up
@@ -550,9 +550,9 @@ children,male,b,computer science,blue,elegant,up
 youth,male,c,enviroment,black,elegant,up
 youth,female,a,enviroment,blue,elegant,left
 adults,male,a,cinema,orange,elegant,left
-seniors,male,b,police,white,cartoonish,right
+seniors,male,b,police,grey,cartoonish,right
 children,female,c,weather,blue,simple,up
-seniors,female,c,restaurants,white,simple,down
+seniors,female,c,restaurants,grey,simple,down
 seniors,male,a,weather,blue,cartoonish,left
 seniors,female,a,mass communication,pink,complex,right
 youth,female,b,enviroment,yellow,cartoonish,up
@@ -563,9 +563,9 @@ children,male,c,police,purple,complex,right
 children,female,c,police,red,cartoonish,down
 children,male,a,medical,yellow,cartoonish,up
 children,male,c,cinema,orange,simple,right
-seniors,male,c,weather,white,complex,left
+seniors,male,c,weather,grey,complex,left
 children,male,a,restaurants,brown,complex,up
-adults,female,b,computer science,white,simple,right
+adults,female,b,computer science,grey,simple,right
 youth,male,c,cinema,black,elegant,left
 youth,female,b,weather,red,complex,left
 youth,female,c,mechanic,orange,simple,left
@@ -573,12 +573,12 @@ youth,male,c,enviroment,yellow,simple,right
 seniors,male,c,engineer,brown,complex,left
 adults,male,a,weather,black,complex,right
 adults,male,b,weather,brown,elegant,up
-adults,female,c,enviroment,white,elegant,up
+adults,female,c,enviroment,grey,elegant,up
 youth,male,a,sales,purple,elegant,up
 seniors,female,a,cinema,blue,elegant,right
 seniors,female,a,cinema,red,complex,down
 children,male,c,enviroment,purple,simple,up
-adults,male,b,education,white,cartoonish,down
+adults,male,b,education,grey,cartoonish,down
 adults,male,b,computer science,pink,simple,up
 youth,female,a,enviroment,brown,simple,left
 youth,female,b,weather,purple,complex,down
@@ -586,8 +586,8 @@ youth,female,a,mechanic,black,cartoonish,up
 children,female,b,engineer,brown,cartoonish,down
 children,male,a,enviroment,pink,simple,up
 seniors,male,a,enviroment,pink,elegant,left
-children,male,c,police,white,complex,down
-adults,female,a,restaurants,white,elegant,down
+children,male,c,police,grey,complex,down
+adults,female,a,restaurants,grey,elegant,down
 youth,male,b,education,orange,elegant,up
 adults,male,c,medical,pink,elegant,down
 adults,male,c,sales,green,cartoonish,right
@@ -621,7 +621,7 @@ children,female,c,education,pink,elegant,up
 adults,female,c,medical,yellow,simple,right
 youth,male,b,sales,pink,cartoonish,right
 adults,male,a,computer science,purple,complex,right
-adults,female,a,medical,white,elegant,up
+adults,female,a,medical,grey,elegant,up
 children,male,a,mass communication,orange,complex,right
 seniors,female,c,cinema,green,cartoonish,right
 seniors,male,c,computer science,orange,elegant,right
@@ -644,7 +644,7 @@ youth,male,c,mechanic,purple,elegant,down
 adults,male,a,computer science,brown,cartoonish,left
 youth,male,b,education,red,simple,down
 youth,female,b,cinema,pink,elegant,left
-seniors,male,a,mechanic,white,complex,left
+seniors,male,a,mechanic,grey,complex,left
 adults,male,a,restaurants,pink,cartoonish,down
 youth,male,c,police,orange,cartoonish,down
 seniors,female,a,weather,orange,complex,left
@@ -657,15 +657,15 @@ adults,female,b,computer science,black,elegant,right
 adults,male,a,restaurants,purple,cartoonish,left
 children,female,c,cinema,black,simple,up
 youth,male,c,sales,black,elegant,up
-youth,female,b,medical,white,elegant,right
+youth,female,b,medical,grey,elegant,right
 adults,male,a,cinema,black,elegant,right
 youth,male,b,cinema,pink,simple,down
 seniors,male,b,engineer,blue,elegant,left
 youth,female,a,education,yellow,cartoonish,down
-seniors,female,b,police,white,simple,up
+seniors,female,b,police,grey,simple,up
 seniors,male,a,cinema,yellow,cartoonish,down
 adults,female,c,restaurants,purple,elegant,down
-seniors,female,b,engineer,white,elegant,down
+seniors,female,b,engineer,grey,elegant,down
 youth,female,c,police,red,cartoonish,right
 youth,male,a,medical,black,complex,up
 seniors,male,b,mechanic,blue,complex,up
@@ -681,11 +681,11 @@ children,male,b,enviroment,yellow,elegant,right
 youth,female,a,police,pink,elegant,left
 children,male,a,education,blue,cartoonish,down
 youth,female,c,sales,brown,cartoonish,right
-adults,male,b,mass communication,white,elegant,up
+adults,male,b,mass communication,grey,elegant,up
 youth,female,b,engineer,black,simple,right
 seniors,female,b,medical,black,elegant,down
 seniors,female,b,computer science,purple,elegant,left
-seniors,female,b,mechanic,white,complex,left
+seniors,female,b,mechanic,grey,complex,left
 adults,male,a,engineer,black,complex,down
 youth,female,a,mechanic,green,simple,up
 children,female,b,computer science,orange,complex,down
@@ -693,7 +693,7 @@ seniors,male,c,restaurants,red,complex,down
 youth,male,b,education,purple,complex,down
 youth,female,b,restaurants,orange,elegant,up
 youth,male,a,weather,orange,simple,left
-seniors,male,a,sales,white,simple,right
+seniors,male,a,sales,grey,simple,right
 children,male,a,cinema,black,elegant,left
 youth,male,b,medical,orange,simple,down
 children,male,a,education,green,elegant,right
@@ -706,14 +706,14 @@ adults,female,a,mass communication,pink,complex,right
 adults,female,a,engineer,pink,elegant,up
 youth,female,c,restaurants,blue,cartoonish,up
 seniors,male,c,mechanic,yellow,cartoonish,up
-seniors,female,b,engineer,white,elegant,up
+seniors,female,b,engineer,grey,elegant,up
 adults,male,b,medical,green,elegant,down
 youth,male,c,computer science,yellow,elegant,right
 seniors,male,a,restaurants,green,elegant,right
-seniors,female,b,restaurants,white,elegant,left
+seniors,female,b,restaurants,grey,elegant,left
 seniors,male,c,education,black,elegant,right
 children,female,a,mass communication,purple,elegant,down
-youth,female,b,cinema,white,simple,down
+youth,female,b,cinema,grey,simple,down
 seniors,male,a,engineer,black,complex,down
 adults,male,b,mechanic,yellow,elegant,down
 seniors,female,b,medical,brown,simple,right
@@ -741,7 +741,7 @@ children,male,b,sales,yellow,complex,up
 seniors,female,b,engineer,orange,complex,left
 youth,female,c,mechanic,green,elegant,up
 adults,male,b,medical,brown,complex,right
-adults,female,b,restaurants,white,complex,left
+adults,female,b,restaurants,grey,complex,left
 seniors,male,b,mass communication,orange,cartoonish,up
 adults,female,b,weather,brown,elegant,down
 children,male,b,restaurants,green,cartoonish,down
@@ -749,19 +749,19 @@ youth,male,a,engineer,green,cartoonish,down
 youth,male,c,mechanic,black,simple,left
 seniors,male,b,sales,yellow,cartoonish,down
 youth,male,a,sales,black,complex,right
-adults,female,a,weather,white,simple,down
+adults,female,a,weather,grey,simple,down
 youth,female,c,sales,brown,elegant,right
 youth,female,a,mass communication,red,cartoonish,up
 adults,male,c,enviroment,red,complex,right
 seniors,female,c,police,orange,complex,left
 adults,female,c,police,orange,complex,left
-adults,female,a,restaurants,white,cartoonish,left
+adults,female,a,restaurants,grey,cartoonish,left
 youth,female,c,engineer,red,complex,up
 adults,male,b,mass communication,green,cartoonish,right
 youth,male,c,mechanic,black,complex,right
 youth,female,b,medical,orange,complex,down
 seniors,male,b,weather,black,simple,right
-children,male,b,sales,white,simple,down
+children,male,b,sales,grey,simple,down
 children,female,c,computer science,yellow,elegant,down
 children,male,c,mass communication,purple,cartoonish,right
 children,female,a,cinema,yellow,complex,down
@@ -771,7 +771,7 @@ adults,male,c,weather,blue,cartoonish,up
 seniors,female,a,medical,yellow,cartoonish,down
 youth,female,c,computer science,purple,elegant,down
 seniors,female,a,enviroment,purple,elegant,down
-seniors,female,c,mechanic,white,simple,down
+seniors,female,c,mechanic,grey,simple,down
 adults,male,a,cinema,black,complex,right
 children,male,b,computer science,blue,cartoonish,down
 seniors,male,c,police,yellow,complex,right
@@ -831,7 +831,7 @@ seniors,female,b,mechanic,red,elegant,left
 youth,female,b,computer science,pink,cartoonish,left
 youth,male,b,enviroment,orange,simple,left
 youth,female,c,weather,pink,complex,up
-youth,male,b,sales,white,elegant,left
+youth,male,b,sales,grey,elegant,left
 youth,male,c,enviroment,yellow,elegant,up
 youth,female,c,sales,blue,cartoonish,down
 adults,female,c,restaurants,red,cartoonish,up
@@ -859,7 +859,7 @@ seniors,female,c,medical,pink,cartoonish,up
 youth,female,a,restaurants,green,simple,down
 seniors,female,c,sales,green,elegant,right
 youth,female,a,mechanic,purple,cartoonish,right
-adults,male,c,police,white,elegant,left
+adults,male,c,police,grey,elegant,left
 seniors,male,a,restaurants,yellow,elegant,right
 youth,female,c,engineer,brown,complex,left
 adults,female,c,cinema,orange,simple,up
@@ -871,9 +871,9 @@ adults,male,a,mechanic,green,complex,down
 youth,male,b,mechanic,red,elegant,up
 youth,female,b,cinema,green,simple,left
 children,male,b,education,pink,simple,up
-children,male,a,mechanic,white,complex,down
+children,male,a,mechanic,grey,complex,down
 children,male,b,restaurants,red,simple,up
-seniors,male,b,education,white,simple,right
+seniors,male,b,education,grey,simple,right
 adults,male,a,restaurants,brown,complex,left
 children,female,a,engineer,purple,simple,down
 adults,male,a,education,red,complex,up
@@ -891,7 +891,7 @@ children,female,a,cinema,yellow,elegant,left
 youth,male,c,medical,orange,simple,right
 children,female,a,enviroment,black,elegant,left
 seniors,female,b,education,yellow,complex,right
-youth,male,b,cinema,white,simple,left
+youth,male,b,cinema,grey,simple,left
 children,male,a,education,brown,elegant,up
 seniors,female,b,sales,brown,cartoonish,down
 youth,male,c,computer science,pink,elegant,left
@@ -904,12 +904,12 @@ adults,male,a,enviroment,purple,complex,left
 seniors,male,b,mass communication,brown,simple,down
 seniors,male,b,police,pink,cartoonish,left
 seniors,female,c,cinema,blue,elegant,up
-children,female,a,restaurants,white,complex,down
+children,female,a,restaurants,grey,complex,down
 seniors,male,b,restaurants,blue,simple,left
 youth,female,c,engineer,yellow,simple,up
 children,female,b,cinema,brown,complex,up
 seniors,male,a,mechanic,purple,elegant,down
-children,male,b,computer science,white,simple,up
+children,male,b,computer science,grey,simple,up
 youth,male,b,restaurants,green,elegant,left
 adults,female,b,weather,blue,elegant,right
 youth,female,c,police,orange,cartoonish,left
@@ -917,13 +917,13 @@ seniors,female,b,medical,orange,elegant,left
 youth,female,a,weather,purple,elegant,right
 seniors,male,b,computer science,green,elegant,left
 adults,male,c,engineer,orange,simple,left
-adults,female,c,medical,white,complex,left
+adults,female,c,medical,grey,complex,left
 youth,male,a,medical,yellow,cartoonish,down
 children,male,a,sales,pink,elegant,up
 children,female,b,education,yellow,elegant,left
 seniors,male,b,cinema,black,elegant,up
 adults,female,a,engineer,red,elegant,left
-seniors,female,c,police,white,elegant,right
+seniors,female,c,police,grey,elegant,right
 seniors,female,a,education,blue,elegant,left
 adults,female,a,enviroment,blue,complex,right
 youth,male,b,education,yellow,simple,down
@@ -935,7 +935,7 @@ children,male,a,enviroment,pink,elegant,down
 adults,female,a,computer science,green,complex,up
 adults,male,b,engineer,brown,simple,left
 seniors,female,c,computer science,pink,complex,left
-youth,male,a,cinema,white,elegant,right
+youth,male,a,cinema,grey,elegant,right
 seniors,female,a,medical,green,cartoonish,down
 youth,male,a,cinema,black,complex,right
 adults,female,b,education,yellow,cartoonish,down
@@ -955,15 +955,15 @@ youth,male,a,medical,pink,complex,down
 youth,male,b,engineer,green,cartoonish,down
 adults,male,a,police,brown,simple,right
 youth,female,a,education,blue,elegant,right
-adults,female,b,mechanic,white,elegant,up
+adults,female,b,mechanic,grey,elegant,up
 adults,female,a,weather,blue,simple,right
 seniors,male,c,education,red,complex,down
-youth,male,c,medical,white,elegant,left
+youth,male,c,medical,grey,elegant,left
 children,female,c,medical,green,elegant,left
 children,male,a,mechanic,red,elegant,left
 seniors,male,a,engineer,orange,simple,up
 youth,male,c,medical,black,cartoonish,right
-adults,female,a,sales,white,elegant,right
+adults,female,a,sales,grey,elegant,right
 children,female,c,computer science,black,cartoonish,down
 seniors,female,a,weather,pink,complex,right
 adults,female,a,medical,yellow,elegant,right
@@ -976,20 +976,20 @@ adults,female,c,education,brown,simple,left
 adults,female,c,engineer,brown,elegant,up
 youth,female,a,weather,brown,elegant,right
 youth,female,b,medical,blue,simple,up
-seniors,male,c,enviroment,white,simple,down
+seniors,male,c,enviroment,grey,simple,down
 adults,male,b,medical,black,complex,down
 youth,male,c,education,yellow,simple,left
 seniors,female,b,police,pink,elegant,right
-youth,female,b,mass communication,white,simple,left
-children,male,b,enviroment,white,simple,right
+youth,female,b,mass communication,grey,simple,left
+children,male,b,enviroment,grey,simple,right
 children,male,b,engineer,orange,cartoonish,left
 youth,female,c,computer science,black,simple,down
 youth,male,c,enviroment,green,complex,left
 adults,male,a,mass communication,green,complex,right
-youth,female,b,engineer,white,simple,right
+youth,female,b,engineer,grey,simple,right
 seniors,male,a,mass communication,red,elegant,up
 seniors,male,b,sales,blue,elegant,left
-youth,female,c,mechanic,white,simple,down
+youth,female,c,mechanic,grey,simple,down
 youth,female,c,engineer,green,elegant,down
 adults,female,c,medical,pink,elegant,left
 youth,female,b,sales,yellow,elegant,right
@@ -997,4 +997,4 @@ adults,female,c,medical,green,cartoonish,left
 seniors,male,a,medical,orange,cartoonish,down
 seniors,male,b,weather,orange,elegant,left
 adults,female,b,computer science,pink,cartoonish,down
-seniors,female,a,engineer,white,simple,down
+seniors,female,a,engineer,grey,simple,down
