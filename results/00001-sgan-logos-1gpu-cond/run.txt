@@ -1,0 +1,1 @@
+{'host_name': 'localhost', 'start_time': '2022-12-19 21:21:36.972047', 'task_name': 'Fady-00001-sgan-logos-1gpu-cond'}

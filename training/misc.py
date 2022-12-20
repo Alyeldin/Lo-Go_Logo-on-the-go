@@ -215,7 +215,7 @@ def setup_snapshot_image_grid(G, training_set,
     layout = 'row_per_class'
     #layout = 'random'
     # Select size.
-    gw = 9; gh = 9
+    gw = 6; gh = 3
 
 
     # Initialize data arrays.

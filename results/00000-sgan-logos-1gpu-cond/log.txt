@@ -1,0 +1,166 @@
+dnnlib: Running training.training_loop.training_loop() on localhost...
+Streaming data using training.dataset.TFRecordDataset...
+##################################
+TF_DIRECTORY:  data
+WORKING DIRECTORY:  c:\Users\Fady\grad repo\Lo-Go_Logo-on-the-go
+##################################
+LABELS LOADED:  3
+Dataset shape = [3, 128, 128]
+Dynamic range = [0, 255]
+Label size    = 3
+Constructing networks...
+
+G                             Params   OutputShape         WeightShape     
+---                           ---      ---                 ---             
+latents_in                    -        (?, 128)            -               
+labels_in                     -        (?, 3)              -               
+lod                           -        ()                  -               
+dlatent_avg                   -        (128,)              -               
+G_mapping/latents_in          -        (?, 128)            -               
+G_mapping/labels_in           -        (?, 3)              -               
+G_mapping/LabelConcat         384      (?, 256)            (3, 128)        
+G_mapping/PixelNorm           -        (?, 256)            -               
+G_mapping/Dense0              32896    (?, 128)            (256, 128)      
+G_mapping/Dense1              16512    (?, 128)            (128, 128)      
+G_mapping/Dense2              16512    (?, 128)            (128, 128)      
+G_mapping/Dense3              16512    (?, 128)            (128, 128)      
+G_mapping/Dense4              16512    (?, 128)            (128, 128)      
+G_mapping/Dense5              16512    (?, 128)            (128, 128)      
+G_mapping/Dense6              16512    (?, 128)            (128, 128)      
+G_mapping/Dense7              16512    (?, 128)            (128, 128)      
+G_mapping/Broadcast           -        (?, 12, 128)        -               
+G_mapping/dlatents_out        -        (?, 12, 128)        -               
+Truncation                    -        (?, 12, 128)        -               
+G_synthesis/dlatents_in       -        (?, 12, 128)        -               
+G_synthesis/4x4/Const         35328    (?, 128, 4, 4)      (128,)          
+G_synthesis/4x4/Conv          180736   (?, 128, 4, 4)      (3, 3, 128, 128)
+G_synthesis/ToRGB_lod5        387      (?, 3, 4, 4)        (1, 1, 128, 3)  
+G_synthesis/8x8/Conv0_up      180736   (?, 128, 8, 8)      (3, 3, 128, 128)
+G_synthesis/8x8/Conv1         180736   (?, 128, 8, 8)      (3, 3, 128, 128)
+G_synthesis/ToRGB_lod4        387      (?, 3, 8, 8)        (1, 1, 128, 3)  
+G_synthesis/Upscale2D         -        (?, 3, 8, 8)        -               
+G_synthesis/Grow_lod4         -        (?, 3, 8, 8)        -               
+G_synthesis/16x16/Conv0_up    180736   (?, 128, 16, 16)    (3, 3, 128, 128)
+G_synthesis/16x16/Conv1       180736   (?, 128, 16, 16)    (3, 3, 128, 128)
+G_synthesis/ToRGB_lod3        387      (?, 3, 16, 16)      (1, 1, 128, 3)  
+G_synthesis/Upscale2D_1       -        (?, 3, 16, 16)      -               
+G_synthesis/Grow_lod3         -        (?, 3, 16, 16)      -               
+G_synthesis/32x32/Conv0_up    180736   (?, 128, 32, 32)    (3, 3, 128, 128)
+G_synthesis/32x32/Conv1       180736   (?, 128, 32, 32)    (3, 3, 128, 128)
+G_synthesis/ToRGB_lod2        387      (?, 3, 32, 32)      (1, 1, 128, 3)  
+G_synthesis/Upscale2D_2       -        (?, 3, 32, 32)      -               
+G_synthesis/Grow_lod2         -        (?, 3, 32, 32)      -               
+G_synthesis/64x64/Conv0_up    180736   (?, 128, 64, 64)    (3, 3, 128, 128)
+G_synthesis/64x64/Conv1       180736   (?, 128, 64, 64)    (3, 3, 128, 128)
+G_synthesis/ToRGB_lod1        387      (?, 3, 64, 64)      (1, 1, 128, 3)  
+G_synthesis/Upscale2D_3       -        (?, 3, 64, 64)      -               
+G_synthesis/Grow_lod1         -        (?, 3, 64, 64)      -               
+G_synthesis/128x128/Conv0_up  180736   (?, 128, 128, 128)  (3, 3, 128, 128)
+G_synthesis/128x128/Conv1     180736   (?, 128, 128, 128)  (3, 3, 128, 128)
+G_synthesis/ToRGB_lod0        387      (?, 3, 128, 128)    (1, 1, 128, 3)  
+G_synthesis/Upscale2D_4       -        (?, 3, 128, 128)    -               
+G_synthesis/Grow_lod0         -        (?, 3, 128, 128)    -               
+G_synthesis/images_out        -        (?, 3, 128, 128)    -               
+G_synthesis/lod               -        ()                  -               
+G_synthesis/noise0            -        (1, 1, 4, 4)        -               
+G_synthesis/noise1            -        (1, 1, 4, 4)        -               
+G_synthesis/noise2            -        (1, 1, 8, 8)        -               
+G_synthesis/noise3            -        (1, 1, 8, 8)        -               
+G_synthesis/noise4            -        (1, 1, 16, 16)      -               
+G_synthesis/noise5            -        (1, 1, 16, 16)      -               
+G_synthesis/noise6            -        (1, 1, 32, 32)      -               
+G_synthesis/noise7            -        (1, 1, 32, 32)      -               
+G_synthesis/noise8            -        (1, 1, 64, 64)      -               
+G_synthesis/noise9            -        (1, 1, 64, 64)      -               
+G_synthesis/noise10           -        (1, 1, 128, 128)    -               
+G_synthesis/noise11           -        (1, 1, 128, 128)    -               
+images_out                    -        (?, 3, 128, 128)    -               
+---                           ---      ---                 ---             
+Total                         2174610                                      
+
+
+D                    Params   OutputShape         WeightShape     
+---                  ---      ---                 ---             
+images_in            -        (?, 3, 128, 128)    -               
+labels_in            -        (?, 3)              -               
+lod                  -        ()                  -               
+FromRGB_lod0         512      (?, 128, 128, 128)  (1, 1, 3, 128)  
+128x128/Conv0        147584   (?, 128, 128, 128)  (3, 3, 128, 128)
+128x128/Conv1_down   147584   (?, 128, 64, 64)    (3, 3, 128, 128)
+Downscale2D          -        (?, 3, 64, 64)      -               
+FromRGB_lod1         512      (?, 128, 64, 64)    (1, 1, 3, 128)  
+Grow_lod0            -        (?, 128, 64, 64)    -               
+64x64/Conv0          147584   (?, 128, 64, 64)    (3, 3, 128, 128)
+64x64/Conv1_down     147584   (?, 128, 32, 32)    (3, 3, 128, 128)
+Downscale2D_1        -        (?, 3, 32, 32)      -               
+FromRGB_lod2         512      (?, 128, 32, 32)    (1, 1, 3, 128)  
+Grow_lod1            -        (?, 128, 32, 32)    -               
+32x32/Conv0          147584   (?, 128, 32, 32)    (3, 3, 128, 128)
+32x32/Conv1_down     147584   (?, 128, 16, 16)    (3, 3, 128, 128)
+Downscale2D_2        -        (?, 3, 16, 16)      -               
+FromRGB_lod3         512      (?, 128, 16, 16)    (1, 1, 3, 128)  
+Grow_lod2            -        (?, 128, 16, 16)    -               
+16x16/Conv0          147584   (?, 128, 16, 16)    (3, 3, 128, 128)
+16x16/Conv1_down     147584   (?, 128, 8, 8)      (3, 3, 128, 128)
+Downscale2D_3        -        (?, 3, 8, 8)        -               
+FromRGB_lod4         512      (?, 128, 8, 8)      (1, 1, 3, 128)  
+Grow_lod3            -        (?, 128, 8, 8)      -               
+8x8/Conv0            147584   (?, 128, 8, 8)      (3, 3, 128, 128)
+8x8/Conv1_down       147584   (?, 128, 4, 4)      (3, 3, 128, 128)
+Downscale2D_4        -        (?, 3, 4, 4)        -               
+FromRGB_lod5         512      (?, 128, 4, 4)      (1, 1, 3, 128)  
+Grow_lod4            -        (?, 128, 4, 4)      -               
+4x4/MinibatchStddev  -        (?, 129, 4, 4)      -               
+4x4/Conv             148736   (?, 128, 4, 4)      (3, 3, 129, 128)
+4x4/Dense0           262272   (?, 128)            (2048, 128)     
+4x4/Dense1           387      (?, 3)              (128, 3)        
+LabelSwitch          -        (?, 1)              -               
+scores_out           -        (?, 1)              -               
+---                  ---      ---                 ---             
+Total                1890307                                      
+
+Building TensorFlow graph...
+Setting up snapshot image grid...
+Conditional
+0
+0
+LABEL:  [[1. 0. 0.]]
+1
+LABEL:  [[1. 0. 0.]]
+2
+LABEL:  [[1. 0. 0.]]
+3
+LABEL:  [[1. 0. 0.]]
+4
+LABEL:  [[1. 0. 0.]]
+5
+LABEL:  [[1. 0. 0.]]
+1
+0
+LABEL:  [[0. 1. 0.]]
+1
+LABEL:  [[0. 1. 0.]]
+2
+LABEL:  [[0. 1. 0.]]
+3
+LABEL:  [[0. 1. 0.]]
+4
+LABEL:  [[0. 1. 0.]]
+5
+LABEL:  [[0. 1. 0.]]
+2
+0
+LABEL:  [[0. 0. 1.]]
+1
+LABEL:  [[0. 0. 1.]]
+2
+LABEL:  [[0. 0. 1.]]
+3
+LABEL:  [[0. 0. 1.]]
+4
+LABEL:  [[0. 0. 1.]]
+5
+LABEL:  [[0. 0. 1.]]
+Setting up run dir...
+Training...
+
