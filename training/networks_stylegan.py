@@ -384,13 +384,13 @@ def G_style(
 def G_mapping(
     latents_in,                             # First input: Latent vectors (Z) [minibatch, latent_size].
     labels_in,                              # Second input: Conditioning labels [minibatch, label_size].
-    latent_size             = 128,          # Latent vector (Z) dimensionality.
+    latent_size             = 32,          # Latent vector (Z) dimensionality.
     label_size              = 3,            # Label dimensionality, 0 if no labels.
-    dlatent_size            = 128,          # Disentangled latent (W) dimensionality.
+    dlatent_size            = 32,          # Disentangled latent (W) dimensionality.
     dlatent_broadcast       = None,         # Output disentangled latent (W) as [minibatch, dlatent_size] or [minibatch, dlatent_broadcast, dlatent_size].
     mapping_layers          = 8,            # Number of mapping layers.
     mapping_fmaps           = 128,          # Number of activations in the mapping layers.
-    mapping_lrmul           = 0.1,         # Learning rate multiplier for the mapping layers.
+    mapping_lrmul           = 0.01,         # Learning rate multiplier for the mapping layers.
     mapping_nonlinearity    = 'lrelu',      # Activation function: 'relu', 'lrelu'.
     use_wscale              = True,         # Enable equalized learning rate?
     normalize_latents       = True,         # Normalize latent vectors (Z) before feeding them to the mapping layers?
@@ -439,7 +439,7 @@ def G_mapping(
 
 def G_synthesis(
     dlatents_in,                        # Input: Disentangled latents (W) [minibatch, num_layers, dlatent_size].
-    dlatent_size        = 128,          # Disentangled latent (W) dimensionality.
+    dlatent_size        = 32,          # Disentangled latent (W) dimensionality.
     num_channels        = 1,            # Number of output color channels.
     resolution          = 128,         # Output resolution.
     fmap_base           = 64,         # Overall multiplier for the number of feature maps.
@@ -567,7 +567,7 @@ def D_basic(
     num_channels        = 1,            # Number of input color channels. Overridden based on dataset.
     resolution          = 32,           # Input resolution. Overridden based on dataset.
     label_size          = 3,            # Dimensionality of the labels, 0 if no labels. Overridden based on dataset.
-    fmap_base           = 64,         # Overall multiplier for the number of feature maps.
+    fmap_base           = 64,           # Overall multiplier for the number of feature maps.
     fmap_decay          = 1.0,          # log2 feature map reduction when doubling the resolution.
     fmap_max            = 128,          # Maximum number of feature maps in any layer.
     nonlinearity        = 'lrelu',      # Activation function: 'relu', 'lrelu',
