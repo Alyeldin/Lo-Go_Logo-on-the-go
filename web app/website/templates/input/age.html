@@ -1,0 +1,138 @@
+{% extends "base.html" %} {% block title%}Input Age Group{% endblock %} {% block
+content %}
+<main id="main">
+  <center>
+    <section class="inner-page">
+      <section id="contact" class="contact" data-aos="fade-up">
+        <h2>Your target audience age group</h2>
+        <form action="input-style" method="post">
+          <div class="container d-flex justify-content-center">
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">Child</h5>
+                  </div>
+                  1-12
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="child"
+                    name="age"
+                    value="child"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">Teen</h5>
+                  </div>
+                  13-19
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="teen"
+                    name="age"
+                    value="teen"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">Young Adult</h5>
+                  </div>
+                  20-29
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="young adult"
+                    name="age"
+                    value="young adult"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">Adult</h5>
+                  </div>
+                  30-59
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="adult"
+                    name="age"
+                    value="adult"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">Elder</h5>
+                  </div>
+                  60+
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="elder"
+                    name="age"
+                    value="elder"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="ms-5">
+              <div class="card" style="width: 10rem; height: 10rem">
+                <div class="card-body p-4">
+                  <div class="text-center">
+                    <h5 class="fw-bolder">All Age Groups</h5>
+                  </div>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="all"
+                    name="age"
+                    value="all"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="mt-5 btn btn-warning" type="submit">Next</button>
+        </form>
+      </section>
+      <!-- End Contact Section -->
+    </section>
+  </center>
+</main>
+<!-- End #main -->
+{% endblock %}

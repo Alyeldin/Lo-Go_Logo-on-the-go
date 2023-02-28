@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./website",
+        "./website",
+        "./website/generator",
+        "./website/generator/icon"
+    ]
+}
