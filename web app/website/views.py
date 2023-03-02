@@ -2,8 +2,9 @@ from flask import Blueprint, redirect, render_template, request, session
 from threading import Thread
 from website import app, auth, db
 import sys
-sys.path.append('C:/Users/Fady/grad repo/web app/website/generator')
 
+
+sys.path.append("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator")
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['POST', 'GET'])
@@ -42,7 +43,9 @@ def input_gender():
 
 
 @views.route('/input-domain', methods=['POST', 'GET'])
+
 def input_domain():
+    print(request.form['name'])
     session['name'] = request.form['name']
     session['slogan'] = request.form.get('slogan')
     return render_template("input/domain.html")

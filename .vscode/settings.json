@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./stylegan2-ada-pytorch",
+        "./web app/website"
+    ]
+}

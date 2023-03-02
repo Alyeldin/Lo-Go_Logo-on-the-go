@@ -27,19 +27,19 @@ import torch
 import legacy as legacy
 
 import sys
-sys.path.append('C:/Users/Fady/grad repo/web app/website')
+sys.path.append("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website")
 from views import encode_labels
 
-df = pd.read_csv('C:/Users/Fady/grad repo/web app/website/generator/dummydata3.csv')
+# df = pd.read_csv('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/dummydata3.csv')
 
-_, age_label = pd.factorize(df['Age'])
-_, gender_label = pd.factorize(df['Gender'])
-_, social_class_label = pd.factorize(df['Social Class'])
-_, job_label = pd.factorize(df['Job'])
+# _, age_label = pd.factorize(df['Age'])
+# _, gender_label = pd.factorize(df['Gender'])
+# _, social_class_label = pd.factorize(df['Social Class'])
+# _, job_label = pd.factorize(df['Job'])
 
-loaded_model_position = pickle.load(open("C:/Users/Fady/grad repo/web app/website/generator/knn_position_model.sav", 'rb'))
-loaded_model_font = pickle.load(open("C:/Users/Fady/grad repo/web app/website/generator/knn_font_model.sav", 'rb'))
-loaded_model_color = pickle.load(open("C:/Users/Fady/grad repo/web app/website/generator/knn_color_model.sav", 'rb'))
+# loaded_model_position = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_position_model.sav", 'rb'))
+# loaded_model_font = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_font_model.sav", 'rb'))
+# loaded_model_color = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_color_model.sav", 'rb'))
 
 
 #----------------------------------------------------------------------------
@@ -58,14 +58,14 @@ def num_range(s: str) -> List[int]:
 @click.command()
 @click.pass_context
 @click.option('-i', 'input',nargs=8, type=click.STRING, default=encode_labels("text"))
-@click.option('--network', 'network_pkl', help='Network pickle filename', default="website/generator/network.pkl", show_default=True)
+@click.option('--network', 'network_pkl', help='Network pickle filename', default="web app/website/generator/network.pkl", show_default=True)
 @click.option('--seeds', type=num_range, help='List of random seeds', default="32,2348", show_default=True)
 @click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
 @click.option('--class', 'class_idx', type=int, help='Class label (unconditional if not specified)')
 @click.option('--label', 'raw_label', type=num_range, help='Raw label', default=encode_labels("icon"))
-@click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='const', show_default=True)
+@click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='random', show_default=True)
 @click.option('--projected-w', help='Projection result file', type=str, metavar='FILE')
-@click.option('--outdir', help='Where to save the output images', type=str, default="./website/static/assets/img/generated logos", show_default=True, metavar='DIR')
+@click.option('--outdir', help='Where to save the output images', type=str, default="web app/website/static/assets/img/generated logos", show_default=True, metavar='DIR')
 def generate_images(
     ctx: click.Context,
     network_pkl: str,
@@ -152,8 +152,8 @@ def generate_images(
     font = input[6]
     color = input[7]
 
-    nameFont = ImageFont.truetype('./fonts/'+font+'.ttf', 40)
-    sloganFont = ImageFont.truetype('./fonts/'+font+'.ttf', 30)
+    nameFont = ImageFont.truetype('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 40)
+    sloganFont = ImageFont.truetype('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 30)
     
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"down")
     im2 = Image.open(f'{outdir}/seed0032.png')

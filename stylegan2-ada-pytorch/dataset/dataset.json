@@ -93,50 +93,32 @@
         ["images/onnibus.png",[2,3,5,18,4]],
         ["images/pendryhotels.png",[2,3,3,20,0]],
         ["images/vitas.png",[2,3,5,9,3]],
-        ["images/Z1.jpg",[2,3,3,1,0]],
-        ["images/2.png",[2,3,3,1,5]],
+        ["images/1.jpg",[2,3,3,1,0]],
+        
         ["images/3.jpg",[2,3,3,1,5]],
-        ["images/4.png",[2,3,3,1,5]],
-        ["images/5.png",[2,3,3,1,5]],
-        ["images/6.png",[2,3,3,1,5]],
-        ["images/7.png",[2,3,3,1,5]],
-        ["images/8.png",[2,3,3,1,5]],
-        ["images/9.png",[2,3,3,1,5]],
-        ["images/10.png",[2,3,3,1,5]],
+     
+        ["images/7.jpg",[2,3,3,1,5]],
+  
         ["images/11.jpg",[2,3,3,1,5]],
-        ["images/12.png",[2,3,3,1,5]],
+        
         ["images/13.jpg",[2,3,3,1,5]],
         ["images/14.jpg",[2,3,3,1,6]],
         ["images/15.jpg",[2,3,3,1,5]],
         ["images/16.jpg",[2,3,3,1,5]],
-        ["images/17.png",[2,3,3,1,5]],
+        
         ["images/18.jpg",[2,3,3,1,5]],
-        ["images/19.jpg",[2,3,3,1,5]],
-        ["images/20.png",[2,3,3,1,0]],
-        ["images/21.png",[2,3,3,1,6]],
+
         ["images/22.jpg",[2,3,3,1,5]],
-        ["images/23.png",[2,3,3,1,5]],
-        ["images/24.jpg",[2,3,3,1,5]],
-        ["images/25.png",[2,3,3,1,5]],
+        
         ["images/26.jpg",[2,3,3,1,5]],
-        ["images/27.png",[2,3,3,1,5]],
+        
         ["images/28.jpg",[2,3,3,1,5]],
-        ["images/29.png",[2,3,3,1,5]],
+       
         ["images/30.jpg",[2,3,3,1,5]],
-        ["images/31.png",[2,3,3,1,5]],
+        
         ["images/32.jpg",[2,3,3,1,5]],
-        ["images/33.png",[2,3,3,1,5]],
-        ["images/34.jpg",[2,3,3,1,5]],
-        ["images/35.png",[2,3,3,1,5]],
-        ["images/36.jpg",[2,3,3,1,5]],
-        ["images/37.png",[2,3,3,1,0]],
-        ["images/38.jpg",[2,3,3,1,5]],
-        ["images/39.png",[2,3,3,1,5]],
-        ["images/40.jpg",[2,3,3,1,5]],
-        ["images/41.jpg",[2,3,3,1,5]],
-        ["images/42.png",[2,3,3,1,5]],
-        ["images/43.jpg",[2,3,3,1,0]],
-        ["images/44.png",[2,3,3,1,5]],
-        ["images/45.png",[2,3,3,1,0]]
+        
+        ["images/34.jpg",[2,3,3,1,5]]
+        
     ]
 }
