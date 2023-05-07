@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title%}Output Page{% endblock %} {% block
 content %}
+
 <main id="main">
   <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
@@ -14,11 +15,7 @@ content %}
     <div class="container d-flex justify-content-center" data-aos="fade-up">
       <div class="ms-5">
         <div class="card" style="width: 18rem; height: 26rem">
-          <img
-            class="card-img-top"
-            src="{{url_for('static', filename='assets/img/generated logos/firstlogo.png')}}"
-            alt="logo 1"
-          />
+          <img class="card-img-top" src="{{firstlogo}}" alt="logo 1" />
           <div class="card-body p-4">
             <div class="text-center">
               <h5 class="fw-bolder">First Logo</h5>
@@ -26,20 +23,16 @@ content %}
           </div>
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
-              <a class="btn btn-outline-dark mt-auto" href="logo-details"
-                >Choose</a
-              >
+              <form action="" method="post">
+                <input type="submit" class="btn btn-outline-dark mt-auto" name="logoOne" value="Choose">
+              </form>
             </div>
           </div>
         </div>
       </div>
       <div class="ms-5">
         <div class="card" style="width: 18rem; height: 26rem">
-          <img
-            class="card-img-top"
-            src="{{url_for('static', filename='assets/img/generated logos/secondlogo.png')}}"
-            alt="logo 2"
-          />
+          <img class="card-img-top" src="{{secondlogo}}" alt="logo 2" />
           <div class="card-body p-4">
             <div class="text-center">
               <h5 class="fw-bolder">Second Logo</h5>
@@ -47,9 +40,9 @@ content %}
           </div>
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
-              <a class="btn btn-outline-dark mt-auto" href="logo-details"
-                >Choose</a
-              >
+              <form action="" method="post">
+                <input type="submit" class="btn btn-outline-dark mt-auto" name="logoTwo" value="Choose">
+              </form>
             </div>
           </div>
         </div>

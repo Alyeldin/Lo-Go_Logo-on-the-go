@@ -56,9 +56,23 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="sign-up" class="get-started-btn scrollto">Get Started</a>
-
+      {% if user != None %}
+        <div class="dropdown">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {{user['username']}}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="profile">Profile</a></li>
+            {% if user['type'] == 'admin' %}
+              <li><a class="dropdown-item" href="feedback">Feedback</a></li>
+            {% endif %}
+            <li><a class="dropdown-item" href="logout">Log Out</a></li>
+          </ul>
+        </div>
+      {% else %}
+        <a href="sign-up" class="get-started-btn scrollto">Join Us</a>
+      {% endif %}
+      
     </div>
   </header>
 
@@ -155,5 +169,4 @@
   <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
 
 </body>
-
 </html>

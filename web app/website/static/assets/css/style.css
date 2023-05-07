@@ -798,7 +798,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(21, 21, 21, 0.6);
+  background: rgb(255, 255, 255);
 }
 
 .portfolio .portfolio-wrap::before {
@@ -843,7 +843,6 @@ section {
 .portfolio .portfolio-wrap .portfolio-info p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
-  text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-style: italic;

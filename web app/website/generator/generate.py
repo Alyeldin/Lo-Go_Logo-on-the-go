@@ -1,5 +1,4 @@
-# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
-#
+#Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
 # NVIDIA CORPORATION and its licensors retain all intellectual property
 # and proprietary rights in and to this software, related documentation
 # and any modifications thereto.  Any use, reproduction, disclosure or
@@ -8,11 +7,12 @@
 
 """Generate images using pretrained network pickle."""
 import pickle
+from website import app, auth, db, storage
 from PIL import Image, ImageDraw, ImageFont
-from matplotlib import colors
 import operator
-import pandas as pd
 import cv2
+import random
+from flask import session
 
 import os
 import re
@@ -27,22 +27,15 @@ import torch
 import legacy as legacy
 
 import sys
-sys.path.append("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website")
-from views import encode_labels
-
-# df = pd.read_csv('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/dummydata3.csv')
-
-# _, age_label = pd.factorize(df['Age'])
-# _, gender_label = pd.factorize(df['Gender'])
-# _, social_class_label = pd.factorize(df['Social Class'])
-# _, job_label = pd.factorize(df['Job'])
-
-# loaded_model_position = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_position_model.sav", 'rb'))
-# loaded_model_font = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_font_model.sav", 'rb'))
-# loaded_model_color = pickle.load(open("C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/website/generator/knn_color_model.sav", 'rb'))
-
+sys.path.append("C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website")
 
 #----------------------------------------------------------------------------
+
+def randseed():
+    return random.randint(0, 10000)
+
+seed1 = randseed()
+seed2 = randseed()
 
 def num_range(s: str) -> List[int]:
     '''Accept either a comma separated list of numbers 'a,b,c' or a range 'a-c' and return as a list of ints.'''
@@ -57,18 +50,20 @@ def num_range(s: str) -> List[int]:
 #----------------------------------------------------------------------------
 @click.command()
 @click.pass_context
-@click.option('-i', 'input',nargs=8, type=click.STRING, default=encode_labels("text"))
-@click.option('--network', 'network_pkl', help='Network pickle filename', default="web app/website/generator/network.pkl", show_default=True)
-@click.option('--seeds', type=num_range, help='List of random seeds', default="32,2348", show_default=True)
+@click.option('--user', 'user_id', default=auth.get_account_info(session['user'])['users'][0]['localId'], show_default=True)
+@click.option('-i', 'input',nargs=4, type=click.STRING, default=[session['name'], session['slogan'], session['style'], session['color']])
+@click.option('--network', 'network_pkl', help='Network pickle filename', default="C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website/generator/network.pkl", show_default=True)
+@click.option('--seeds', type=num_range, help='List of random seeds', default=f"{seed1},{seed2}", show_default=True)
 @click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
 @click.option('--class', 'class_idx', type=int, help='Class label (unconditional if not specified)')
-@click.option('--label', 'raw_label', type=num_range, help='Raw label', default=encode_labels("icon"))
+@click.option('--label', 'raw_label', type=num_range, help='Raw label', default=f"{session['gender']},{session['class']},{session['age']},{session['domain']},{session['subdomain']}")
 @click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='random', show_default=True)
 @click.option('--projected-w', help='Projection result file', type=str, metavar='FILE')
 @click.option('--outdir', help='Where to save the output images', type=str, default="web app/website/static/assets/img/generated logos", show_default=True, metavar='DIR')
 def generate_images(
     ctx: click.Context,
     network_pkl: str,
+    user_id: str,
     input: Optional[List[str]],
     seeds: Optional[List[int]],
     truncation_psi: float,
@@ -147,16 +142,16 @@ def generate_images(
 
         return image
 
-    name = input[4]
-    slogan = input[5]
-    font = input[6]
-    color = input[7]
+    name = input[0]
+    slogan = input[1]
+    font = input[2]
+    color = input[3]
 
-    nameFont = ImageFont.truetype('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 40)
-    sloganFont = ImageFont.truetype('C:/Users/Aly khairy/Desktop/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 30)
+    nameFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 40)
+    sloganFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 30)
     
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"down")
-    im2 = Image.open(f'{outdir}/seed0032.png')
+    im2 = Image.open(f'{outdir}/seed{seed1}.png')
     img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
 
     img = img.convert('L')
@@ -191,12 +186,13 @@ def generate_images(
                 elif color=='purple':
                     image.putpixel( (x, y), tuple(map(operator.add, image.getpixel((x,y)), (80,0,120))) )
                 
-    image.save(f'{outdir}/firstlogo.png')
+    image.save(f'{outdir}/seed{seed1}.png')
+    storage.child(f"logo/{user_id}/firstlogo.png").put(f'{outdir}/seed{seed1}.png')
 
     print('FIRST LOGO DONE')
 
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"right")
-    im2 = Image.open(f'{outdir}/seed2348.png')
+    im2 = Image.open(f'{outdir}/seed{seed2}.png')
     img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
 
     img = img.convert('L')
@@ -231,27 +227,6 @@ def generate_images(
                 elif color=='purple':
                     image.putpixel( (x, y), tuple(map(operator.add, image.getpixel((x,y)), (80,0,120))) )
                 
-    image.save(f'{outdir}/secondlogo.png')
-
+    image.save(f'{outdir}/seed{seed2}.png')
+    storage.child(f"logo/{user_id}/secondlogo.png").put(f'{outdir}/seed{seed2}.png')
     print('SECOND LOGO DONE')
-
-
-
-
-
-
-
-
-    # factorizedInput = [[
-    #     age_label.tolist().index(input[0]),
-    #     gender_label.tolist().index(input[1]),
-    #     social_class_label.tolist().index(input[2]),
-    #     job_label.tolist().index(input[3]),
-    # ]]
-    # color = loaded_model_color.predict(factorizedInput)
-    # position = loaded_model_position.predict(factorizedInput)
-    # font = loaded_model_font.predict(factorizedInput)
-
-    # print(color[0])
-    # print(position[0])
-    # print(font[0])
