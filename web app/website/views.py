@@ -232,7 +232,7 @@ def generating_logo():
 
     t = Thread(target=generate_images)
     t.start()
-
+    t.join()
     return render_template("loading.html")
 
 @views.route('/login', methods=['POST', 'GET'])
