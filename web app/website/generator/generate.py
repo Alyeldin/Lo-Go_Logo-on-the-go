@@ -1,15 +1,14 @@
+
 """Generate images using pretrained network pickle."""
 import pickle
-from clear_cache import clear
 from website import app, auth, db, storage
 from PIL import Image, ImageDraw, ImageFont
 import operator
 import cv2
 import random
 from flask import session
-import generate
+
 import os
-import debugprint
 import re
 from typing import List, Optional
 
@@ -22,21 +21,12 @@ import torch
 import legacy as legacy
 
 import sys
-import importlib
-
-
-importlib.reload(generate)
-
-
 sys.path.append("C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website")
 
 #----------------------------------------------------------------------------
 
 def randseed():
-    return random.randint(1000, 10000)
-
-def inputs():
-    return session
+    return random.randint(1000, 99999)
 
 seed1 = randseed()
 seed2 = randseed()
@@ -54,13 +44,13 @@ def num_range(s: str) -> List[int]:
 #----------------------------------------------------------------------------
 @click.command()
 @click.pass_context
-@click.option('--user', 'user_id', default=auth.get_account_info(inputs()['user'])['users'][0]['localId'], show_default=True)
-@click.option('-i', 'input',nargs=4, type=click.STRING, default=[inputs()['name'], inputs()['slogan'], inputs()['style'], inputs()['color']])
+@click.option('--user', 'user_id', default=auth.get_account_info(session['user'])['users'][0]['localId'], show_default=True)
+@click.option('-i', 'input',nargs=4, type=click.STRING, default=[session['name'], session['slogan'], session['style'], session['color']])
 @click.option('--network', 'network_pkl', help='Network pickle filename', default="C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website/generator/network.pkl", show_default=True)
 @click.option('--seeds', type=num_range, help='List of random seeds', default=f"{seed1},{seed2}", show_default=True)
 @click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
 @click.option('--class', 'class_idx', type=int, help='Class label (unconditional if not specified)')
-@click.option('--label', 'raw_label', type=num_range, help='Raw label', default=f"{inputs()['gender']},{inputs()['class']},{inputs()['age']},{inputs()['domain']},{inputs()['subdomain']}")
+@click.option('--label', 'raw_label', type=num_range, help='Raw label', default=f"{session['gender']},{session['class']},{session['age']},{session['domain']},{session['subdomain']}")
 @click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='random', show_default=True)
 @click.option('--projected-w', help='Projection result file', type=str, metavar='FILE')
 @click.option('--outdir', help='Where to save the output images', type=str, default="web app/website/static/assets/img/generated logos", show_default=True, metavar='DIR')
@@ -77,9 +67,7 @@ def generate_images(
     raw_label: Optional[List[int]],
     projected_w: Optional[str]
 ):
-    print(input)
-    print(input)
-    print(raw_label )
+
     print('Loading networks from "%s"...' % network_pkl)
     device = torch.device('cuda')
     with dnnlib.util.open_url(network_pkl) as f:
@@ -194,6 +182,7 @@ def generate_images(
                 
     image.save(f'{outdir}/seed{seed1}.png')
     storage.child(f"logo/{user_id}/firstlogo.png").put(f'{outdir}/seed{seed1}.png')
+
     print('FIRST LOGO DONE')
 
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"right")
@@ -235,13 +224,3 @@ def generate_images(
     image.save(f'{outdir}/seed{seed2}.png')
     storage.child(f"logo/{user_id}/secondlogo.png").put(f'{outdir}/seed{seed2}.png')
     print('SECOND LOGO DONE')
-
-
-    os.remove(f'{outdir}/seed{seed2}.png')
-    os.remove(f'{outdir}/seed{seed1}.png')
-
-    clear(dir=".")
-
-    del input,raw_label,user_id,class_idx,truncation_psi
-
-generate.generate_images()
