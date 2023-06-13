@@ -8,6 +8,8 @@ import tempfile
 import random
 import uuid
 sys.path.append('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website/generator')
+import  generate
+
 
 views = Blueprint('views', __name__)
 
@@ -228,11 +230,18 @@ def output():
 def generating_logo():
     session['color'] = request.form['color']
 
-    from generate import generate_images
+    seed1 = random.randint(1000, 99999)
+    seed2 = random.randint(1000, 99999)
+    print(seed1)
+    print(seed2)
 
-    t = Thread(target=generate_images)
+    t = Thread(target=generate.generate_images, kwargs={'raw_label':[int(session['gender']),int(session['class']),int(session['age']),int(session['domain']),int(session['subdomain'])],
+                                                        'input':[session['name'], session['slogan'], session['style'], session['color']],
+                                                        'seeds':[seed1,seed2],
+                                                        'user_id':auth.get_account_info(session['user'])['users'][0]['localId']})
     t.start()
     t.join()
+
     return render_template("loading.html")
 
 @views.route('/login', methods=['POST', 'GET'])

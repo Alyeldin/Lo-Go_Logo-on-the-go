@@ -1,3 +1,9 @@
+#Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
+# NVIDIA CORPORATION and its licensors retain all intellectual property
+# and proprietary rights in and to this software, related documentation
+# and any modifications thereto.  Any use, reproduction, disclosure or
+# distribution of this software and related documentation without an express
+# license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 """Generate images using pretrained network pickle."""
 import pickle
@@ -19,17 +25,13 @@ import PIL.Image
 import torch
 
 import legacy as legacy
+import gc
 
 import sys
 sys.path.append("C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website")
 
 #----------------------------------------------------------------------------
 
-def randseed():
-    return random.randint(1000, 99999)
-
-seed1 = randseed()
-seed2 = randseed()
 
 def num_range(s: str) -> List[int]:
     '''Accept either a comma separated list of numbers 'a,b,c' or a range 'a-c' and return as a list of ints.'''
@@ -42,31 +44,18 @@ def num_range(s: str) -> List[int]:
     return [int(x) for x in vals]
 
 #----------------------------------------------------------------------------
-@click.command()
-@click.pass_context
-@click.option('--user', 'user_id', default=auth.get_account_info(session['user'])['users'][0]['localId'], show_default=True)
-@click.option('-i', 'input',nargs=4, type=click.STRING, default=[session['name'], session['slogan'], session['style'], session['color']])
-@click.option('--network', 'network_pkl', help='Network pickle filename', default="C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website/generator/network.pkl", show_default=True)
-@click.option('--seeds', type=num_range, help='List of random seeds', default=f"{seed1},{seed2}", show_default=True)
-@click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
-@click.option('--class', 'class_idx', type=int, help='Class label (unconditional if not specified)')
-@click.option('--label', 'raw_label', type=num_range, help='Raw label', default=f"{session['gender']},{session['class']},{session['age']},{session['domain']},{session['subdomain']}")
-@click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='random', show_default=True)
-@click.option('--projected-w', help='Projection result file', type=str, metavar='FILE')
-@click.option('--outdir', help='Where to save the output images', type=str, default="web app/website/static/assets/img/generated logos", show_default=True, metavar='DIR')
 def generate_images(
-    ctx: click.Context,
-    network_pkl: str,
-    user_id: str,
-    input: Optional[List[str]],
-    seeds: Optional[List[int]],
-    truncation_psi: float,
-    noise_mode: str,
-    outdir: str,
-    class_idx: Optional[int],
-    raw_label: Optional[List[int]],
-    projected_w: Optional[str]
+    user_id,
+    input,
+    seeds,    
+    raw_label,
+    truncation_psi= 1,
+    noise_mode='random',
+    network_pkl="C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/website/generator/network.pkl",
+    outdir= "web app/website/static/assets/img/generated logos",
 ):
+    
+    print(input)
 
     print('Loading networks from "%s"...' % network_pkl)
     device = torch.device('cuda')
@@ -75,35 +64,13 @@ def generate_images(
 
     os.makedirs(outdir, exist_ok=True)
 
-    # Synthesize the result of a W projection.
-    if projected_w is not None:
-        if seeds is not None:
-            print ('warn: --seeds is ignored when using --projected-w')
-        print(f'Generating images from projected W "{projected_w}"')
-        ws = np.load(projected_w)['w']
-        ws = torch.tensor(ws, device=device) # pylint: disable=not-callable
-        assert ws.shape[1:] == (G.num_ws, G.w_dim)
-        for idx, w in enumerate(ws):
-            img = G.synthesis(w.unsqueeze(0), noise_mode=noise_mode)
-            img = (img.permute(0, 2, 3, 1) * 127.5 + 128).clamp(0, 255).to(torch.uint8)
-            img = PIL.Image.fromarray(img[0].cpu().numpy(), 'RGB').save(f'{outdir}/proj{idx:02d}.png')
-        return
 
-    if seeds is None:
-        ctx.fail('--seeds option is required when not using --projected-w')
 
     # Labels.
     label = torch.zeros([1, G.c_dim], device=device)
     if G.c_dim != 0:
-        if class_idx is None and raw_label is None:
-            ctx.fail('Must specify class label with --class or --label when using a conditional network')
-        if class_idx is not None:
-            label[:, class_idx] = 1
         if raw_label is not None:
             label = torch.unsqueeze(torch.tensor(raw_label,device=device),0)
-    else:
-        if class_idx is not None:
-            print ('warn: --class=lbl ignored when running on an unconditional network')
 
     # Generate images.
     for seed_idx, seed in enumerate(seeds):
@@ -145,7 +112,7 @@ def generate_images(
     sloganFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 30)
     
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"down")
-    im2 = Image.open(f'{outdir}/seed{seed1}.png')
+    im2 = Image.open(f'{outdir}/seed{seeds[0]}.png')
     img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
 
     img = img.convert('L')
@@ -180,13 +147,13 @@ def generate_images(
                 elif color=='purple':
                     image.putpixel( (x, y), tuple(map(operator.add, image.getpixel((x,y)), (80,0,120))) )
                 
-    image.save(f'{outdir}/seed{seed1}.png')
-    storage.child(f"logo/{user_id}/firstlogo.png").put(f'{outdir}/seed{seed1}.png')
+    image.save(f'{outdir}/seed{seeds[0]}.png')
+    storage.child(f"logo/{user_id}/firstlogo.png").put(f'{outdir}/seed{seeds[0]}.png')
 
     print('FIRST LOGO DONE')
 
     img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"right")
-    im2 = Image.open(f'{outdir}/seed{seed2}.png')
+    im2 = Image.open(f'{outdir}/seed{seeds[1]}.png')
     img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
 
     img = img.convert('L')
@@ -221,6 +188,6 @@ def generate_images(
                 elif color=='purple':
                     image.putpixel( (x, y), tuple(map(operator.add, image.getpixel((x,y)), (80,0,120))) )
                 
-    image.save(f'{outdir}/seed{seed2}.png')
-    storage.child(f"logo/{user_id}/secondlogo.png").put(f'{outdir}/seed{seed2}.png')
-    print('SECOND LOGO DONE')
+    image.save(f'{outdir}/seed{seeds[1]}.png')
+    storage.child(f"logo/{user_id}/secondlogo.png").put(f'{outdir}/seed{seeds[1]}.png')
+    print('SECOND LOGO DONE')
