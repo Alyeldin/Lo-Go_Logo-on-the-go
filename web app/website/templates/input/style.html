@@ -7,6 +7,7 @@ content %}
         <h2>Font Style</h2>
         <form action="input-color" method="post">
           <div class="container d-flex justify-content-center">
+            
             <div class="m-2">
               <div class="card" style="width: 15rem; height: 12rem">
                 <div class="card-body p-4">
@@ -15,7 +16,6 @@ content %}
                   </div>
                   <p style="font-family: thin_1; font-size:1.5rem">Show the gentle side</p>
                 </div>
-
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <input
                     class="form-check-input"
@@ -25,9 +25,20 @@ content %}
                     value="thin"
                     required
                   />
+                  
+                  {% if session["class"]== "3" %}
+                  <div class="m-1">
+                    
+                     <b>Recommended</b>
+                    </div>
+                  {% endif %}
+
+                
                 </div>
               </div>
             </div>
+
+
             <div class="m-2">
               <div class="card" style="width: 15rem; height: 12rem">
                 <div class="card-body p-4">
@@ -45,6 +56,11 @@ content %}
                     value="elegant"
                     required
                   />
+                  {% if session["class"]== "3" %}
+                  <div class="m-1">
+                     <b>Recommended</b>
+                   </div>
+                 {% endif %}
                 </div>
               </div>
             </div>
@@ -69,7 +85,8 @@ content %}
               </div>
             </div>
           </div>
-          <div class="container d-flex justify-content-center">
+
+          <div class="container d-flex justify-content-center m-4">
             <div class="m-2">
               <div class="card" style="width: 15rem; height: 12rem">
                 <div class="card-body p-4">
@@ -127,6 +144,12 @@ content %}
                     value="classy"
                     required
                   />
+                   {% if session["class"]== "3" %}
+                   <div class="m-1">
+                    
+                     <b>Recommended</b>
+                   </div>
+                  {% endif %}
                 </div>
               </div>
             </div>
