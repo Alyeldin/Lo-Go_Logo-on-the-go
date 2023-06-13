@@ -240,8 +240,6 @@ def generating_logo():
                                                         'seeds':[seed1,seed2],
                                                         'user_id':auth.get_account_info(session['user'])['users'][0]['localId']})
     t.start()
-    t.join()
-
     return render_template("loading.html")
 
 @views.route('/login', methods=['POST', 'GET'])
