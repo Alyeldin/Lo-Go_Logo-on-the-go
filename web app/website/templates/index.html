@@ -194,7 +194,7 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           {% for logo in logos %}
           <a href="logo-details?logo={{logo[1]['file']}}&creator={{users[loop.index0]}}">
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <img src="{{get_logo_file(logo[1]['file'])}}" class="img-fluid" alt="">
                 <div class="portfolio-info">
