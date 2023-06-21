@@ -108,12 +108,12 @@ def generate_images(
     font = input[2]
     color = input[3]
 
-    nameFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 40)
-    sloganFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 30)
+    nameFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 75)
+    sloganFont = ImageFont.truetype('C:/xampp/htdocs/LoGo/Lo-Go_Logo-on-the-go/web app/fonts/'+font+'.ttf', 60)
     
-    img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"down")
+    img = create_image((1200,1200),'white',name,slogan,sloganFont,nameFont,"down")
     im2 = Image.open(f'{outdir}/seed{seeds[0]}.png')
-    img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
+    img.paste(im2,[int(600-im2.size[0]/2),int(600-im2.size[1]/2)])
 
     img = img.convert('L')
 
@@ -152,9 +152,9 @@ def generate_images(
 
     print('FIRST LOGO DONE')
 
-    img = create_image((800,800),'white',name,slogan,sloganFont,nameFont,"right")
+    img = create_image((1200,1200),'white',name,slogan,sloganFont,nameFont,"right")
     im2 = Image.open(f'{outdir}/seed{seeds[1]}.png')
-    img.paste(im2,[int(400-im2.size[0]/2),int(400-im2.size[1]/2)])
+    img.paste(im2,[int(600-im2.size[0]/2),int(600-im2.size[1]/2)])
 
     img = img.convert('L')
 

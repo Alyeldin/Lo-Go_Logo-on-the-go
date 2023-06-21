@@ -430,7 +430,8 @@ def convert_dataset(
         image_bits = io.BytesIO()
         img.save(image_bits, format='png', compress_level=0, optimize=False)
         save_bytes(os.path.join(archive_root_dir, archive_fname), image_bits.getbuffer())
-        labels.append([archive_fname, image['label']] if image['label'] is not None else None)
+        
+        labels.append([archive_fname, image['label']] if image['label'] is not None else [archive_fname,[0,0,0,0,0]])
 
     metadata = {
         'labels': labels if all(x is not None for x in labels) else None
